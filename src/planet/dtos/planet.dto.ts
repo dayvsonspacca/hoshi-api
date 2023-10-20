@@ -1,4 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
+import { MoonDto } from 'src/moon/dtos/moon.dto';
 
 export class PlanetDto {
   @ApiProperty({ description: 'The planet name.', example: 'Earth' })
@@ -23,4 +24,10 @@ export class PlanetDto {
     example: '12742',
   })
   diameter: number;
+
+  @ApiProperty({
+    description: 'Planet moons array.',
+    example: MoonDto,
+  })
+  moons: Array<MoonDto>;
 }

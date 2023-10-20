@@ -13,12 +13,12 @@ export class MoonController {
   @Get(':moon_name')
   @ApiOkResponse({
     status: 200,
-    description: 'The found planet.',
+    description: 'The found moon.',
     type: MoonDto,
   })
   @ApiNotFoundResponse({
     status: 404,
-    description: 'Planet {planet_name} not found.',
+    description: 'Moon {moon_name} not found.',
     type: MoonNotFoundDto,
   })
   async getMoon(

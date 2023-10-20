@@ -4,11 +4,15 @@ import { PlanetDto } from './dtos/planet.dto';
 import { PlanetNotFoundDto } from './dtos/planet.notfound.dto';
 import { PlanetService } from './planet.service';
 import { Response } from 'express';
+import { MoonService } from 'src/moon/moon.service';
 
 @Controller('planet')
 @ApiTags('planet')
 export class PlanetController {
-  constructor(private planetService: PlanetService) {}
+  constructor(
+    private planetService: PlanetService,
+    private moonService: MoonService,
+  ) {}
 
   @Get(':planet_name')
   @ApiOkResponse({

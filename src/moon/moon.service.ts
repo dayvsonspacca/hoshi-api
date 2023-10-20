@@ -14,14 +14,4 @@ export class MoonService {
 
     return moon;
   }
-
-  public getMoons(planet_id: number) {
-    const moons = this.prisma.moon.findMany({
-      where: {
-        planet_id,
-      },
-    });
-
-    return moons;
-  }
 }

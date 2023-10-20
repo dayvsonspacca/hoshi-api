@@ -10,6 +10,9 @@ export class PlanetService {
       where: {
         planet_name,
       },
+      include: {
+        moons: true,
+      },
     });
 
     return planet;

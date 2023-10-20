@@ -14,7 +14,7 @@ model Planet {
   radius      Float
   diameter    Float
   has_ring    Boolean @default(false)
-  Moon        Moon[]
+  moons       Moon[]
 }
 
 model Moon {
