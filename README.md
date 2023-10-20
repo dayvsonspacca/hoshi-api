@@ -1,32 +1,31 @@
-## Installation
 
+# Hoshi 🌠
+
+Hoshi é uma API REST focada no aprendizado do framework NestJS sua proposta é servir informações sobre os planetas do sistema solar como massa, luas e etc.
+
+
+## Instalação
+
+Para instalar e rodar a API localmente siga as instruções:
+
+Clone o repositório:
+```
+$ git clone https://github.com/dayvsonspacca/hoshi.git
+```
+
+Instale os pacotes:
 ```bash
+$ cd hoshi
 $ pnpm install
-$ pnpm run seed
 ```
 
-## Running the app
-
+Execute as migrações do banco de dados e popule ele:
 ```bash
-# development
-$ pnpm run start
+$ npx prisma migrate dev --name init
+$ pnpm run seed:planets
+$ pnpm run seed:moons
+``` 
 
-# watch mode
-$ pnpm run start:dev
+## Documentação da API
 
-# production mode
-$ pnpm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ pnpm run test
-
-# e2e tests
-$ pnpm run test:e2e
-
-# test coverage
-$ pnpm run test:cov
-```
+Depois de subir a aplicação localmente sua documentação pode ser encontrada [aqui](http://localhost:3000/api) através do swagger.
