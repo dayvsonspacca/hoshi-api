@@ -8,13 +8,14 @@ datasource db {
 }
 
 model Planet {
-  planet_id   Int     @id @default(autoincrement())
-  planet_name String  @unique
-  mass        Float
-  radius      Float
-  diameter    Float
-  has_ring    Boolean @default(false)
-  moons       Moon[]
+  planet_id    Int     @id @default(autoincrement())
+  planet_name  String  @unique
+  mass         Float
+  radius       Float
+  diameter     Float
+  has_ring     Boolean @default(false)
+  sun_distance Float
+  moons        Moon[]
 }
 
 model Moon {
