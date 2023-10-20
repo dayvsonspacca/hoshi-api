@@ -29,3 +29,10 @@ $ pnpm run seed:moons
 ## Documentação da API
 
 Depois de subir a aplicação localmente sua documentação pode ser encontrada [aqui](http://localhost:3000/api) através do swagger.
+
+## Stack utilizada
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg" height="30" alt="nestjs logo"  />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=prisma" height="30" alt="prisma logo"  />
+</div>
