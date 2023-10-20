@@ -14,4 +14,15 @@ model Planet {
   radius      Float
   diameter    Float
   has_ring    Boolean @default(false)
+  Moon        Moon[]
+}
+
+model Moon {
+  moon_id   Int    @id @default(autoincrement())
+  moon_name String @unique
+  mass      Float
+  radius    Float
+  diameter  Float
+  planet_id Int
+  planet    Planet @relation(fields: [planet_id], references: [planet_id])
 }
