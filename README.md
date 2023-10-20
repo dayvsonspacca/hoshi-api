@@ -32,7 +32,9 @@ Depois de subir a aplicação localmente sua documentação pode ser encontrada 
 
 ## Stack utilizada
 <div align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg" height="30" alt="nestjs logo"  />
+  <img src="https://skillicons.dev/icons?i=nestjs" height="30" alt="nestjs logo"  />
   <img width="12" />
   <img src="https://skillicons.dev/icons?i=prisma" height="30" alt="prisma logo"  />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=sqlite" height="30" alt="sqlite logo"  />
 </div>
