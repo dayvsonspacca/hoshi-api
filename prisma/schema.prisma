@@ -1,0 +1,16 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Planet {
+  planet_id   Int    @id @default(autoincrement())
+  planet_name String @unique
+  mass        Float
+  radius      Float
+  diameter    Float
+}
