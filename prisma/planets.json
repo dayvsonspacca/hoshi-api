@@ -3,8 +3,8 @@
     "planet_id": 0,
     "planet_name": "Sun",
     "mass": 1.989e30,
-    "radius": 696340,
-    "diameter": 1392700,
+    "radius": 696340.0,
+    "diameter": 1392700.0,
     "has_ring": false
   },
   {
