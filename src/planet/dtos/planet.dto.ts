@@ -26,6 +26,18 @@ export class PlanetDto {
   diameter: number;
 
   @ApiProperty({
+    description: 'Time in days of the rotation moviment of the planet.',
+    example: 365,
+  })
+  rotation_time: number;
+
+  @ApiProperty({
+    description: 'Time in days of the translation moviment of the planet.',
+    example: 1,
+  })
+  translation_time: number;
+
+  @ApiProperty({
     description: 'Planet moons array.',
     example: MoonDto,
   })
