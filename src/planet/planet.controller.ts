@@ -4,11 +4,15 @@ import { PlanetDto } from './dtos/planet.dto';
 import { PlanetNotFoundDto } from './dtos/planet.notfound.dto';
 import { PlanetService } from './planet.service';
 import { Response } from 'express';
+import { PixelArtService } from 'src/pixelart/pixelart.service';
 
 @Controller('planet')
 @ApiTags('planet')
 export class PlanetController {
-  constructor(private planetService: PlanetService) {}
+  constructor(
+    private readonly planetService: PlanetService,
+    private readonly pixelArtService: PixelArtService,
+  ) {}
 
   @Get(':planet_name')
   @ApiOkResponse({
@@ -38,5 +42,13 @@ export class PlanetController {
       message: `Planet {${planet_name}} not found.`,
       statusCode: HttpStatus.NOT_FOUND,
     });
+  }
+
+  @Get('pixelart/:planet_name')
+  async getPixelart(@Param() { planet_name }: { planet_name: string }) {
+    planet_name =
+      planet_name.charAt(0).toUpperCase() + planet_name.substring(1);
+
+    
   }
 }
