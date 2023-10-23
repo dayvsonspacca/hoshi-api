@@ -1,10 +1,13 @@
 import { Module } from '@nestjs/common';
-import { PlanetModule } from './planet/planet.module';
-import { MoonModule } from './moon/moon.module';
+import { PlanetController } from './planet/planet.controller';
+import { MoonController } from './moon/moon.controller';
+import { PlanetService } from './planet/planet.service';
+import { MoonService } from './moon/moon.service';
+import { PrismaService } from './prisma.service';
 
 @Module({
-  imports: [PlanetModule, MoonModule],
-  controllers: [],
-  providers: [],
+  imports: [],
+  controllers: [PlanetController, MoonController],
+  providers: [PlanetService, MoonService, PrismaService],
 })
 export class AppModule {}
