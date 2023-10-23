@@ -4,6 +4,7 @@
 
 # db file
 /prisma/dev.db
+/prisma/dev.db-journal
 
 # Logs
 logs
