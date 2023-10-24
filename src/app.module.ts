@@ -4,11 +4,10 @@ import { MoonController } from './moon/moon.controller';
 import { PlanetService } from './planet/planet.service';
 import { MoonService } from './moon/moon.service';
 import { PrismaService } from './prisma.service';
-import { PixelArtService } from './pixelart/pixelart.service';
 
 @Module({
   imports: [],
   controllers: [PlanetController, MoonController],
-  providers: [PlanetService, MoonService, PrismaService, PixelArtService],
+  providers: [PlanetService, MoonService, PrismaService],
 })
 export class AppModule {}

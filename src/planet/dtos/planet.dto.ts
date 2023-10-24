@@ -41,5 +41,5 @@ export class PlanetDto {
     description: 'Planet moons array.',
     example: MoonDto,
   })
-  moons: Array<MoonDto>;
+  moons: MoonDto;
 }
