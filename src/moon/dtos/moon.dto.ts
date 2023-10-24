@@ -17,8 +17,7 @@ export class MoonDto {
   radius: number;
 
   @ApiProperty({
-    description:
-      'Float number to represent the diameter of the moon in kilometers.',
+    description: 'Float number to represent the diameter of the moon in kilometers.',
     example: '12742',
   })
   diameter: number;

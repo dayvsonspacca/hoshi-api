@@ -1,12 +1,4 @@
-import {
-  Controller,
-  Get,
-  HttpStatus,
-  Param,
-  Res,
-  StreamableFile,
-  Header,
-} from '@nestjs/common';
+import { Controller, Get, HttpStatus, Param, Res, StreamableFile, Header } from '@nestjs/common';
 import { ApiOkResponse, ApiNotFoundResponse, ApiTags } from '@nestjs/swagger';
 import { PlanetDto } from './dtos/planet.dto';
 import { PlanetNotFoundDto } from './dtos/planet.notfound.dto';
@@ -30,12 +22,8 @@ export class PlanetController {
     description: 'Planet {planet_name} not found.',
     type: PlanetNotFoundDto,
   })
-  async getPlanet(
-    @Param() { planet_name }: { planet_name: string },
-    @Res() response: Response,
-  ) {
-    planet_name =
-      planet_name.charAt(0).toUpperCase() + planet_name.substring(1);
+  async getPlanet(@Param() { planet_name }: { planet_name: string }, @Res() response: Response) {
+    planet_name = planet_name.charAt(0).toUpperCase() + planet_name.substring(1);
 
     const planet = await this.planetService.getPlanet(planet_name);
 
@@ -59,15 +47,11 @@ export class PlanetController {
     status: 404,
     description: 'PIxelart of {planet_name} not found.',
   })
-  getPixelart(
-    @Param() { planet_name }: { planet_name: string },
-  ): StreamableFile {
+  getPixelart(@Param() { planet_name }: { planet_name: string }): StreamableFile {
     planet_name = planet_name.toLowerCase();
 
     // TODO: Return message when file not found.
-    const pixelArt = createReadStream(
-      `src/planet/arts/pixelart_${planet_name}.png`,
-    );
+    const pixelArt = createReadStream(`src/planet/arts/pixelart_${planet_name}.png`);
 
     return new StreamableFile(pixelArt);
   }

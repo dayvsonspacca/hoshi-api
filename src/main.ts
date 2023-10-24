@@ -7,9 +7,7 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
     .setTitle('Hoshi Documentation')
-    .setDescription(
-      'The Hoshi API description, get info about planets in solar system.',
-    )
+    .setDescription('The Hoshi API description, get info about planets in solar system.')
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);

@@ -21,10 +21,7 @@ export class MoonController {
     description: 'Moon {moon_name} not found.',
     type: MoonNotFoundDto,
   })
-  async getMoon(
-    @Param() { moon_name }: { moon_name: string },
-    @Res() response: Response,
-  ) {
+  async getMoon(@Param() { moon_name }: { moon_name: string }, @Res() response: Response) {
     const moon = await this.moonService.getMoon(moon_name);
 
     if (moon) {

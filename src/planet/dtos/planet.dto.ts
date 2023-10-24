@@ -12,15 +12,13 @@ export class PlanetDto {
   mass: number;
 
   @ApiProperty({
-    description:
-      'Float number to represent radius of the planet in kilometers.',
+    description: 'Float number to represent radius of the planet in kilometers.',
     example: '6371',
   })
   radius: number;
 
   @ApiProperty({
-    description:
-      'Float number to represent the diameter of the planet in kilometers.',
+    description: 'Float number to represent the diameter of the planet in kilometers.',
     example: '12742',
   })
   diameter: number;
